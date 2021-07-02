@@ -1,0 +1,37 @@
+{
+  "BetterBeginnings:Brute": {
+    "NAME": "Brute",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Exhaust."
+  },
+  "BetterBeginnings:Cowardice": {
+    "NAME": "Cowardice",
+    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Dazed to your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add 1 *Dazed to your draw pile and hand."
+  },
+  "BetterBeginnings:DataRecovery": {
+    "NAME": "Data Recovery",
+    "DESCRIPTION": "Gain !B! Block. NL Move !M! card from your discard pile to your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Move !M! cards from your discard pile to your draw pile."
+  },
+  "BetterBeginnings:Piety": {
+    "NAME": "Piety",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Mantra."
+  },
+  "BetterBeginnings:Plague": {
+    "NAME": "Plague",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Poison.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Apply !M! Poison to ALL enemies."
+  },
+  "BetterBeginnings:Prescience": {
+    "NAME": "Prescience",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!."
+  },
+  "BetterBeginnings:StabAndStrike": {
+    "NAME": "Stab And Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand."
+  },
+  "BetterBeginnings:Subzero": {
+    "NAME": "Subzero",
+    "DESCRIPTION": "Channel 2 Frost. NL Gain 1 Focus."
+  }
+}
