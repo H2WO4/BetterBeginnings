@@ -1,4 +1,4 @@
-| Name | Image | Upgraded image | Rarity | Type | Cost | Description |
+| Name |⠀Image | Image+ | Rarity | Type | Cost | Description |
 | ---- | ----- | -------------- | ------ | ---- | ---- | ----------- |
 | Brute | ![](small-card-images/Red-Brute.png) | ![](small-card-images/Red-BrutePlus.png) | Basic | Attack | 2 | Deal 6 (10) damage. Gain 2 Strength. Exhaust. |
 | Cowardice | ![](small-card-images/Red-Cowardice.png) | ![](small-card-images/Red-CowardicePlus.png) | Basic | Skill | 1 | Gain 8 (11) Block. Add 1 Dazed to your draw pile and hand. |
