@@ -5,7 +5,7 @@
   },
   "BetterBeginnings:Cowardice": {
     "NAME": "Lâcheté",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez 1 *Hébétement à votre pioche et votre main."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez un *Hébétement à votre pioche et votre main."
   },
   "BetterBeginnings:DataRecovery": {
     "NAME": "Récupération de données",
@@ -13,7 +13,7 @@
   },
   "BetterBeginnings:Piety": {
     "NAME": "Piété",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de Mantra."
+    "DESCRIPTION": "Retenue. NL Gagnez !B! d'Armure. NL Gagnez !M! de Mantra."
   },
   "BetterBeginnings:Plague": {
     "NAME": "Peste",
@@ -26,10 +26,10 @@
   },
   "BetterBeginnings:StabAndStrike": {
     "NAME": "Frappe et coup",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 1 *Surin à votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez un *Surin à votre main."
   },
   "BetterBeginnings:Subzero": {
     "NAME": "Temps glacial",
-    "DESCRIPTION": "Canalisez 2 Orbes Glaciaires. NL Gagnez 1 de Concentration."
+    "DESCRIPTION": "Canalisez !M! Orbes Glaciaires."
   }
 }

@@ -49,7 +49,7 @@ public class StabAndStrike extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(2);
             initializeDescription();
         }
     }

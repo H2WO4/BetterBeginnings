@@ -27,24 +27,26 @@ public class Subzero extends CustomCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = CardColor.BLUE;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public Subzero() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ChannelAction(new Frost()));
-        this.addToBot(new ChannelAction(new Frost()));
-        this.addToBot(new ApplyPowerAction(p, p, new FocusPower(p, 1), 1));
+        for (int i = 0; i < this.magicNumber; i++) {
+            this.addToBot(new ChannelAction(new Frost()));
+        }
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
+            this.upgradeMagicNumber(1);
             initializeDescription();
         }
     }

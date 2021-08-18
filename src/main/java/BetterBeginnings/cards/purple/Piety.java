@@ -33,8 +33,9 @@ public class Piety extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = 4;
         this.block = this.baseBlock;
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.selfRetain = true;
     }
 
     @Override
@@ -53,7 +54,7 @@ public class Piety extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeBlock(2);
             initializeDescription();
         }
     }

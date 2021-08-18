@@ -5,7 +5,7 @@
   },
   "BetterBeginnings:Cowardice": {
     "NAME": "Cowardice",
-    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Dazed to your draw pile and hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Dazed to your draw pile and hand."
   },
   "BetterBeginnings:DataRecovery": {
     "NAME": "Data Recovery",
@@ -13,7 +13,7 @@
   },
   "BetterBeginnings:Piety": {
     "NAME": "Piety",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Mantra."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Gain !M! Mantra."
   },
   "BetterBeginnings:Plague": {
     "NAME": "Plague",
@@ -22,14 +22,14 @@
   },
   "BetterBeginnings:Prescience": {
     "NAME": "Prescience",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!."
+    "DESCRIPTION": "Retain. Deal !D! damage. NL Scry !M!."
   },
   "BetterBeginnings:StabAndStrike": {
     "NAME": "Stab And Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Shiv to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Shiv to your hand."
   },
   "BetterBeginnings:Subzero": {
     "NAME": "Subzero",
-    "DESCRIPTION": "Channel 2 Frost. NL Gain 1 Focus."
+    "DESCRIPTION": "Channel !M! Frost."
   }
 }

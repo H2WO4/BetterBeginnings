@@ -45,7 +45,7 @@ public class DataRecovery extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeBlock(2);
             initializeDescription();
         }
     }

@@ -34,7 +34,7 @@ public class Prescience extends CustomCard {
 
     public Prescience() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 4;
+        this.baseDamage = 3;
         this.damage = this.baseDamage;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
