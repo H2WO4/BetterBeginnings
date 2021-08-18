@@ -40,17 +40,14 @@ public class Cowardice extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, this.block));
         this.addToBot(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));
-        if (this.upgraded) {
-            this.addToBot(new MakeTempCardInHandAction(new Dazed()));
-        }
+        this.addToBot(new MakeTempCardInHandAction(new Dazed()));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(2);
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.upgradeBlock(3);
             initializeDescription();
         }
     }

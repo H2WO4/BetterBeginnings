@@ -13,6 +13,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,20 +28,15 @@ public class BetterBeginnings implements
         EditCardsSubscriber,
         EditStringsSubscriber,
         PostInitializeSubscriber {
-    // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
-    // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(BetterBeginnings.class.getName());
     private static String modID;
 
-    //This is for the in-game mod settings panel.
     private static final String MODNAME = "BetterBeginnings";
     private static final String AUTHOR = "H2WO4";
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String DESCRIPTION = "Give every character 2 new cards in their starting decks, replacing a Strike and a Defend.";
     
     // =============== INPUT TEXTURE LOCATION =================
 
-    
-    //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "BetterBeginningsResources/images/Badge.png";
     
     // =============== MAKE IMAGE PATHS =================
@@ -112,9 +108,8 @@ public class BetterBeginnings implements
     
     
     public static void initialize() {
-        logger.info("========================= Initializing Default Mod. Hi. =========================");
+        logger.info("Initializing BetterBeginnings ...");
         BetterBeginnings BetterBeginnings = new BetterBeginnings();
-        logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
 
     // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
@@ -125,7 +120,7 @@ public class BetterBeginnings implements
     
     @Override
     public void receivePostInitialize() {
-        logger.info("Loading badge image and mod options");
+        logger.info(" - Loading badge image");
         
         // Load the Mod Badge
         Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
@@ -144,26 +139,14 @@ public class BetterBeginnings implements
 
     @Override
     public void receiveEditCards() {
-        logger.info("Adding variables");
-        //Ignore this
         pathCheck();
-        // Add the Custom Dynamic Variables
-        logger.info("Add variables");
-        // Add the Custom Dynamic variables
         
-        logger.info("Adding cards");
+        logger.info(" - Adding cards");
 
-        new AutoAdd("BetterBeginnings") // ${project.artifactId}
-            .packageFilter("BetterBeginnings.cards") // filters to any class in the same package as AbstractDefaultCard, nested packages included
+        new AutoAdd("BetterBeginnings")
+            .packageFilter("BetterBeginnings.cards")
             .setDefaultSeen(true)
             .cards();
-
-        // .setDefaultSeen(true) unlocks the cards
-        // This is so that they are all "seen" in the library,
-        // for people who like to look at the card list before playing your mod
-
-        logger.info("Done adding cards!");
-
 
     }
     
@@ -174,19 +157,22 @@ public class BetterBeginnings implements
     
     @Override
     public void receiveEditStrings() {
-        logger.info("You seeing this?");
-        logger.info("Beginning to edit strings for mod with ID: " + getModID());
-        
-        // CardStrings
-        BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/BetterBeginnings-Card-Strings.json");
+        logger.info(" - Loading locales");
 
-        logger.info("Done editing strings");
+        String lang_pre = "";
+        switch (Settings.language) {
+            case FRA:
+                lang_pre = "fra";
+                break;
+            default:
+                lang_pre = "eng";
+                break;
+        }
+        BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/" + lang_pre + "/BetterBeginnings-Card-Strings.json");
     }
     
     // ================ /LOAD THE TEXT/ ===================
 
-    // this adds "ModName:" before the ID of any card/relic/power etc.
-    // in order to avoid conflicts if any other mod uses the same ID.
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }

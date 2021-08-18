@@ -30,13 +30,13 @@ public class Prescience extends CustomCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = CardColor.PURPLE;
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Prescience() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 7;
+        this.baseDamage = 4;
         this.damage = this.baseDamage;
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
 

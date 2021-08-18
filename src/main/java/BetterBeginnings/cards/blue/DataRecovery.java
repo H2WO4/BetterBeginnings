@@ -1,11 +1,9 @@
 package BetterBeginnings.cards.blue;
 
 import BetterBeginnings.BetterBeginnings;
-import BetterBeginnings.actions.MoveToDrawAction;
 import basemod.abstracts.CustomCard;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -33,27 +31,21 @@ public class DataRecovery extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = 4;
         this.block = this.baseBlock;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new SelectCardsAction(p.discardPile.group, this.magicNumber, "", true, (card) -> true, (cards) -> {
-            for (AbstractCard c: cards) {
-                this.addToTop(new MoveToDrawAction(c, p.discardPile));
-            }
-        }));
+        this.addToBot(new MoveCardsAction(p.drawPile, p.discardPile, (card) -> true, 2));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(2);
-            this.upgradeMagicNumber(1);
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.upgradeBlock(3);
             initializeDescription();
         }
     }

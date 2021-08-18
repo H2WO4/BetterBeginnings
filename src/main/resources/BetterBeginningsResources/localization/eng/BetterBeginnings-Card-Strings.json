@@ -5,13 +5,11 @@
   },
   "BetterBeginnings:Cowardice": {
     "NAME": "Cowardice",
-    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Dazed to your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add 1 *Dazed to your draw pile and hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Dazed to your draw pile and hand."
   },
   "BetterBeginnings:DataRecovery": {
     "NAME": "Data Recovery",
-    "DESCRIPTION": "Gain !B! Block. NL Move !M! card from your discard pile to your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Move !M! cards from your discard pile to your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Shuffle !M! cards from your discard pile into your draw pile."
   },
   "BetterBeginnings:Piety": {
     "NAME": "Piety",
@@ -28,7 +26,7 @@
   },
   "BetterBeginnings:StabAndStrike": {
     "NAME": "Stab And Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Shiv to your hand."
   },
   "BetterBeginnings:Subzero": {
     "NAME": "Subzero",

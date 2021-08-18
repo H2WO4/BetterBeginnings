@@ -1,21 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--Hello! You'll basically should only need to change these names and the steam path (just below)-->
-    <!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
     <groupId>BetterBeginnings</groupId>
-    <artifactId>BetterBeginnings</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
+    <artifactId>BetterBeginnings</artifactId>
     <name>Better Beginnings</name>
-    <version>0.1.0</version>
+    <version>1.0.0</version>
     <description>Give every character 2 new cards in their starting decks, replacing a Strike and a Defend.</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <SlayTheSpire.version>11-30-2020</SlayTheSpire.version>
-        <ModTheSpire.version>3.8.0</ModTheSpire.version>
+        <SlayTheSpire.version>12-22-2020</SlayTheSpire.version>
+        <ModTheSpire.version>3.23.2</ModTheSpire.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
         <Steam.path>E:\Steam\steamapps</Steam.path>
     </properties>
 
@@ -26,7 +23,6 @@
             <version>${SlayTheSpire.version}</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/common/SlayTheSpire/desktop-1.0.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
@@ -34,28 +30,24 @@
             <version>${ModTheSpire.version}</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1605060445/ModTheSpire.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>basemod</groupId>
             <artifactId>basemod</artifactId>
-            <version>5.0.0</version>
+            <version>5.33.1</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/BaseMod.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl.mod</groupId>
             <artifactId>StSLib</artifactId>
-            <version>1.3.2</version>
+            <version>1.23.1</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
         </dependency>
     </dependencies>
 
 
-    <!-- This is how your code is packaged into the jar file-->
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
@@ -78,7 +70,6 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <!-- This moves your mod into a common folder where all mods you make can go. -->
                                 <copy file="target/${project.artifactId}.jar" tofile="${Steam.path}/common/SlayTheSpire/mods/${project.artifactId}.jar"/>
                             </target>
                         </configuration>

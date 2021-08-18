@@ -32,9 +32,9 @@ public class Brute extends CustomCard {
 
     public Brute() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 10;
+        this.baseDamage = 6;
         this.damage = this.baseDamage;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
@@ -49,8 +49,7 @@ public class Brute extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
-            this.upgradeMagicNumber(1);
+            this.upgradeDamage(4);
             initializeDescription();
         }
     }

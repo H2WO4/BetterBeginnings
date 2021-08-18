@@ -1,0 +1,35 @@
+{
+  "BetterBeginnings:Brute": {
+    "NAME": "Brute",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !M! de Force. NL Épuisement."
+  },
+  "BetterBeginnings:Cowardice": {
+    "NAME": "Lâcheté",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez 1 *Hébétement à votre pioche et votre main."
+  },
+  "BetterBeginnings:DataRecovery": {
+    "NAME": "Récupération de données",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Mélangez !M! cartes de votre pile de défausse dans votre pioche."
+  },
+  "BetterBeginnings:Piety": {
+    "NAME": "Piété",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de Mantra."
+  },
+  "BetterBeginnings:Plague": {
+    "NAME": "Peste",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !M! de Poison.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !M! de Poison à TOUT les ennemis."
+  },
+  "BetterBeginnings:Prescience": {
+    "NAME": "Prescience",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Scrutez !M! cartes."
+  },
+  "BetterBeginnings:StabAndStrike": {
+    "NAME": "Frappe et coup",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 1 *Surin à votre main."
+  },
+  "BetterBeginnings:Subzero": {
+    "NAME": "Temps glacial",
+    "DESCRIPTION": "Canalisez 2 Orbes Glaciaires. NL Gagnez 1 de Concentration."
+  }
+}

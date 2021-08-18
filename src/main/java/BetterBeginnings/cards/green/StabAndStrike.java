@@ -32,9 +32,11 @@ public class StabAndStrike extends CustomCard {
 
     public StabAndStrike() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 5;
+        this.baseDamage = 4;
         this.damage = this.baseDamage;
         this.tags.add(CardTags.STRIKE);
+
+        this.cardsToPreview = new Shiv();
     }
 
     @Override
