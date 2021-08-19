@@ -1,6 +1,7 @@
 package BetterBeginnings.cards.blue;
 
 import BetterBeginnings.BetterBeginnings;
+import BetterBeginnings.powers.SubzeroPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
@@ -9,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
-import com.megacrit.cardcrawl.powers.FocusPower;
 
 import static BetterBeginnings.BetterBeginnings.makeCardPath;
 
@@ -31,7 +31,7 @@ public class Subzero extends CustomCard {
 
     public Subzero() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -40,6 +40,7 @@ public class Subzero extends CustomCard {
         for (int i = 0; i < this.magicNumber; i++) {
             this.addToBot(new ChannelAction(new Frost()));
         }
+        this.addToBot(new ApplyPowerAction(p, p, new SubzeroPower(p)));
     }
 
     @Override

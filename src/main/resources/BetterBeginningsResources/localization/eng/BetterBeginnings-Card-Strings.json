@@ -22,7 +22,7 @@
   },
   "BetterBeginnings:Prescience": {
     "NAME": "Prescience",
-    "DESCRIPTION": "Retain. Deal !D! damage. NL Scry !M!."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!."
   },
   "BetterBeginnings:StabAndStrike": {
     "NAME": "Stab And Strike",
@@ -30,6 +30,6 @@
   },
   "BetterBeginnings:Subzero": {
     "NAME": "Subzero",
-    "DESCRIPTION": "Channel !M! Frost."
+    "DESCRIPTION": "Channel !M! Frost. NL At the start of your turn, remove your rightmost orb."
   }
 }

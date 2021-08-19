@@ -15,6 +15,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -43,6 +44,10 @@ public class BetterBeginnings implements
     
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
+    }
+
+    public static String makePowerPath(String resourcePath) {
+        return getModID() + "Resources/images/powers/" + resourcePath;
     }
     
     // =============== /MAKE IMAGE PATHS/ =================
@@ -169,6 +174,7 @@ public class BetterBeginnings implements
                 break;
         }
         BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/" + lang_pre + "/BetterBeginnings-Card-Strings.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/" + lang_pre + "/BetterBeginnings-Power-Strings.json");
     }
     
     // ================ /LOAD THE TEXT/ ===================
