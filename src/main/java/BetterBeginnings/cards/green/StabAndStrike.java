@@ -17,17 +17,14 @@ import static BetterBeginnings.BetterBeginnings.makeCardPath;
 public class StabAndStrike extends CustomCard {
 
     public static final String ID = BetterBeginnings.makeID(StabAndStrike.class.getSimpleName());
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-
     public static final String IMG = makeCardPath("StabAndStrike.png");
-
+    public static final CardColor COLOR = CardColor.GREEN;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = CardColor.GREEN;
     private static final int COST = 1;
 
     public StabAndStrike() {
@@ -49,7 +46,7 @@ public class StabAndStrike extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.upgradeDamage(4);
             initializeDescription();
         }
     }

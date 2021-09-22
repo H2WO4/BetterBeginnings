@@ -16,17 +16,14 @@ import static BetterBeginnings.BetterBeginnings.makeCardPath;
 public class Cowardice extends CustomCard {
 
     public static final String ID = BetterBeginnings.makeID(Cowardice.class.getSimpleName());
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-
     public static final String IMG = makeCardPath("Cowardice.png");
-
+    public static final CardColor COLOR = CardColor.RED;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = CardColor.RED;
     private static final int COST = 1;
 
     public Cowardice() {

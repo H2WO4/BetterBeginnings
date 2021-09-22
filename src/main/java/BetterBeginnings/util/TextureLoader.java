@@ -16,8 +16,8 @@ import java.util.HashMap;
 
 @SuppressWarnings("ALL")
 public class TextureLoader {
-    private static final HashMap<String, Texture> textures = new HashMap<>();
     public static final Logger logger = LogManager.getLogger(TextureLoader.class.getName());
+    private static final HashMap<String, Texture> textures = new HashMap<>();
 
     /**
      * @param textureString - String path to the texture you want to load relative to resources,

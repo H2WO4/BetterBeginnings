@@ -17,22 +17,19 @@ import static BetterBeginnings.BetterBeginnings.makeCardPath;
 public class Brute extends CustomCard {
 
     public static final String ID = BetterBeginnings.makeID(Brute.class.getSimpleName());
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-
     public static final String IMG = makeCardPath("Brute.png");
-
+    public static final CardColor COLOR = CardColor.RED;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = CardColor.RED;
     private static final int COST = 2;
 
     public Brute() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 6;
+        this.baseDamage = 7;
         this.damage = this.baseDamage;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
@@ -49,7 +46,7 @@ public class Brute extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(5);
             initializeDescription();
         }
     }

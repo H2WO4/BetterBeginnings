@@ -16,17 +16,14 @@ import static BetterBeginnings.BetterBeginnings.makeCardPath;
 public class Plague extends CustomCard {
 
     public static final String ID = BetterBeginnings.makeID(Plague.class.getSimpleName());
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-
     public static final String IMG = makeCardPath("Plague.png");
-
+    public static final CardColor COLOR = CardColor.GREEN;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = CardColor.GREEN;
     private static final int COST = 0;
 
     public Plague() {
@@ -41,11 +38,10 @@ public class Plague extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, this.block));
         if (this.upgraded) {
-            for (AbstractMonster mo: AbstractDungeon.getCurrRoom().monsters.monsters) {
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 this.addToBot(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, this.magicNumber), this.magicNumber));
             }
-        }
-        else {
+        } else {
             this.addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber));
         }
     }

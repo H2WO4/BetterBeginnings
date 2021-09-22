@@ -19,24 +19,21 @@ import static BetterBeginnings.BetterBeginnings.makeCardPath;
 public class Prescience extends CustomCard {
 
     public static final String ID = BetterBeginnings.makeID(Prescience.class.getSimpleName());
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-
     public static final String IMG = makeCardPath("Prescience.png");
-
+    public static final CardColor COLOR = CardColor.PURPLE;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = CardColor.PURPLE;
     private static final int COST = 0;
 
     public Prescience() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 3;
         this.damage = this.baseDamage;
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
     }
 

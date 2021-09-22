@@ -16,17 +16,14 @@ import static BetterBeginnings.BetterBeginnings.makeCardPath;
 public class Piety extends CustomCard {
 
     public static final String ID = BetterBeginnings.makeID(Piety.class.getSimpleName());
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-
     public static final String IMG = makeCardPath("Piety.png");
-
+    public static final CardColor COLOR = CardColor.PURPLE;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = CardColor.PURPLE;
     private static final int COST = 1;
 
     public Piety() {
