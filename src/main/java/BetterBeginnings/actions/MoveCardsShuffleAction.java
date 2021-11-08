@@ -121,7 +121,7 @@ public class MoveCardsShuffleAction extends AbstractGameAction {
                     card2.current_x = CardGroup.DRAW_PILE_X;
                     card2.current_y = CardGroup.DRAW_PILE_Y;
                     this.source.removeCard(card2);
-                    this.destination.addToTop(card2);
+                    this.destination.addToRandomSpot(card2);
                     AbstractDungeon.player.hand.refreshHandLayout();
                     AbstractDungeon.player.hand.applyPowers();
                 }
@@ -193,7 +193,7 @@ public class MoveCardsShuffleAction extends AbstractGameAction {
                         this.p.createHandIsFullDialog();
                     } else {
                         this.source.removeCard(card);
-                        this.destination.addToTop(card);
+                        this.destination.addToRandomSpot(card);
                     }
 
                     this.p.hand.refreshHandLayout();
