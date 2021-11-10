@@ -169,6 +169,12 @@ public class BetterBeginnings implements
             case FRA:
                 lang_pre = "fra";
                 break;
+            case ZHS:
+                lang_pre = "zhs";
+                break;
+            case JPN:
+                lang_pre = "jpn2";
+                break;
             default:
                 lang_pre = "eng";
                 break;

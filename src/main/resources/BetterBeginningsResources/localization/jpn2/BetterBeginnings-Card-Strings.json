@@ -1,0 +1,35 @@
+{
+  "BetterBeginnings:Brute": {
+    "NAME": "暴君",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 筋力 !M! を得る。 NL 廃棄。"
+  },
+  "BetterBeginnings:Cowardice": {
+    "NAME": "臆病",
+    "DESCRIPTION": "!B! ブロック を得る。 NL *めまい を1枚山札と手札に加える。"
+  },
+  "BetterBeginnings:DataRecovery": {
+    "NAME": "データ復旧",
+    "DESCRIPTION": "!B! ブロック を得る。 捨て札のカードを2枚山札に加える。"
+  },
+  "BetterBeginnings:Piety": {
+    "NAME": "経験",
+    "DESCRIPTION": "保留。 NL !B! ブロック を得る。 NL マントラ !M! を得る。"
+  },
+  "BetterBeginnings:Plague": {
+    "NAME": "疫病",
+    "DESCRIPTION": "!B! ブロック を得る。 NL 毒 !M! を与える。",
+    "UPGRADE_DESCRIPTION": "!B! ブロック を得る。 NL 敵全体 に 毒 !M! を与える。"
+  },
+  "BetterBeginnings:Prescience": {
+    "NAME": "予感",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 占術 !M!。"
+  },
+  "BetterBeginnings:StabAndStrike": {
+    "NAME": "スターブアンドストライク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL ナイフ を1枚手札に加える。"
+  },
+  "BetterBeginnings:Subzero": {
+    "NAME": "氷点下",
+    "DESCRIPTION": "フロスト !M! を生成する。 NL ターン開始時、 先頭の オーブ を 取り除く。"
+  }
+}
