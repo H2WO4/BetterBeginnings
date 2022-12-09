@@ -1,9 +1,12 @@
 package BetterBeginnings.cards.blue;
 
 import BetterBeginnings.BetterBeginnings;
-import BetterBeginnings.actions.MoveCardsShuffleAction;
+import gameplayatoms.actions.common.MoveRandDrawAction;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -11,7 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BetterBeginnings.BetterBeginnings.makeCardPath;
 
-public class DataRecovery extends CustomCard {
+public class DataRecovery extends CustomCard
+{
 
     public static final String ID = BetterBeginnings.makeID(DataRecovery.class.getSimpleName());
     public static final String IMG = makeCardPath("DataRecovery.png");
@@ -24,7 +28,8 @@ public class DataRecovery extends CustomCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final int COST = 1;
 
-    public DataRecovery() {
+    public DataRecovery()
+    {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = 4;
         this.block = this.baseBlock;
@@ -33,14 +38,23 @@ public class DataRecovery extends CustomCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster m)
+    {
         this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new MoveCardsShuffleAction(p.drawPile, p.discardPile, (card) -> true, 2));
+
+        CardGroup temp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        this.addToBot(new MoveCardsAction(temp, p.discardPile, 2, (cards) ->
+        {
+            for (AbstractCard card : cards)
+                this.addToTop(new MoveRandDrawAction(card, temp));
+        }));
     }
 
     @Override
-    public void upgrade() {
-        if (!this.upgraded) {
+    public void upgrade()
+    {
+        if (!this.upgraded)
+        {
             this.upgradeName();
             this.upgradeBlock(2);
             initializeDescription();

@@ -13,7 +13,7 @@
         <SlayTheSpire.version>12-22-2020</SlayTheSpire.version>
         <ModTheSpire.version>3.23.2</ModTheSpire.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <Steam.path>D:\SteamLibrary\steamapps</Steam.path>
+        <Steam.path>/home/arthur/.steam/debian-installation/steamapps/</Steam.path>
     </properties>
 
     <dependencies>
@@ -44,6 +44,13 @@
             <version>1.23.1</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl.mod</groupId>
+            <artifactId>gameplayatoms</artifactId>
+            <version>0.1</version>
+            <scope>system</scope>
+            <systemPath>${Steam.path}/common/SlayTheSpire/mods/gameplayatoms.jar</systemPath>
         </dependency>
     </dependencies>
 
